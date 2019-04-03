@@ -49,6 +49,11 @@ public class SeparateChainingHashTable {
     return (Hashable)theLists[ x.hash(theLists.length)].get(Position); // equals será usado aqui
     }
 
+    public void printTable(){
+        for (LinkedList elemento : theLists) {
+            System.out.println(elemento.element());
+        }
+    }
 
     
 }

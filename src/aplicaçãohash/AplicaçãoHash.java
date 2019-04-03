@@ -8,8 +8,8 @@ import java.io.IOException;
 
 public class AplicaçãoHash { 
     public static void main(String[] args) {
-        String csvArquivo = "\\Users\\pesquisa\\Documents\\arquivo\\arquivo.csv";
-        SeparateChainingHashTable ht = new SeparateChainingHashTable(10007);
+        String csvArquivo = "C:\\Users\\Dinopc\\Desktop\\Faculdade  5\\Estrutura-de-dados-2\\Hash-Trab\\NOME_MATRICULA.csv";
+        SeparateChainingHashTable ht = new SeparateChainingHashTable(10000);
         Aluno[] aluno = new Aluno[100];
         BufferedReader conteudoCSV = null; //Ler todo conteúdo e salvar na memória
         String linha = "";
@@ -22,11 +22,13 @@ public class AplicaçãoHash {
                 String[] moeda = linha.split(csvSeparadorDeCampo); //Quando ele encontrar o ;, ele considera como um campo
                 aluno[i]= new Aluno(moeda[0],moeda[1]);
                 System.out.println("NOME: " +aluno[i].getNome()+" | MATRICULA: " +aluno[i].getMatricula());
-               
-                ++i;      
-               System.out.println("Passou da primeira parte!");
+                ht.insert(aluno[i]);
+                ++i;
             }
-            ht.insert(aluno[0]);
+            System.out.println("--------------------------------------------------------");
+            System.out.println("Acabou a criação de alunos!");
+            ht.printTable();
+            
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo nao encontrado: \n"+e.getMessage());
         }

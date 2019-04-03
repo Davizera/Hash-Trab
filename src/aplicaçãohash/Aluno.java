@@ -4,8 +4,8 @@ package aplicaçãohash;
 
 
 public class Aluno extends SeparateChainingHashTable implements Hashable {
-    String nome ;
-    String matricula;
+    private String nome ;
+    private String matricula;
 
     public String getNome() {
         return nome;
@@ -33,7 +33,8 @@ public class Aluno extends SeparateChainingHashTable implements Hashable {
     
     @Override
     public int hash(int length){ 
-        return length;
+        int hashValue = hash( this.nome, length);
+        return hashValue;
     }
 
 }

@@ -51,7 +51,7 @@ public class SeparateChainingHashTable {
 
     public void printTable(){
         System.out.println("Já chamou");
-        String[] colidiram = null;
+        int colidiram;
         for(int i=0; i<theLists.length; i++){
                 if(theLists[i].size()>=2){
                     System.out.println("================COLIDIRU=====================");
@@ -59,11 +59,12 @@ public class SeparateChainingHashTable {
                         System.out.println(theLists[i].get(j));   
                     }
                     System.out.println("=============================================");
+                    colidiram=theLists[i].size();
                 }else{
                 System.out.println(theLists[i].toString());   
                 System.out.println("");
                 } 
-
+            
             }
         }
     }

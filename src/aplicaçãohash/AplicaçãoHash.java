@@ -27,6 +27,7 @@ public class AplicaçãoHash {
             }
             System.out.println("--------------------------------------------------------");
             System.out.println("Acabou a criação de alunos!");
+            ht.remove(aluno[20]);
             ht.printTable();
             
         } catch (FileNotFoundException e) {

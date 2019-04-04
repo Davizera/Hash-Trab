@@ -36,6 +36,11 @@ public class Aluno extends SeparateChainingHashTable implements Hashable {
         int hashValue = hash( this.nome, length);
         return hashValue;
     }
+    
+    @Override
+    public String toString(){
+        return this.nome + " " + this.matricula;
+    }
 
 }
 

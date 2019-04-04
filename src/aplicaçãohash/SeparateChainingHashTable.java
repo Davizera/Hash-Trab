@@ -41,7 +41,10 @@ public class SeparateChainingHashTable {
         whichList.add(0,x);
     }
     public void remove( Hashable x ) {
-    theLists[ x.hash( theLists.length )].remove(x);
+        Hashable teste;
+        teste = x;
+        theLists[ x.hash( theLists.length )].remove(x); 
+        System.out.println("O nome e a matricula do aluno removido são, respectivamente: "+teste);
     }
     public Hashable find( Hashable x ) {
         int Position;
@@ -50,8 +53,12 @@ public class SeparateChainingHashTable {
     }
 
     public void printTable(){
-        for (LinkedList elemento : theLists) {
-            System.out.println(elemento.element());
+        System.out.println("Já chamou");
+        for(int i=0; i<theLists.length; i++){
+            for(int j=0; j<theLists[i].size(); j++){
+                System.out.println(j);
+                System.out.println(theLists[i].toString());
+            }
         }
     }
 

@@ -9,7 +9,7 @@ import java.io.IOException;
 public class AplicaçãoHash { 
     public static void main(String[] args) {
         String csvArquivo = "C:\\Users\\Dinopc\\Desktop\\Faculdade  5\\Estrutura-de-dados-2\\Hash-Trab\\NOME_MATRICULA.csv";
-        SeparateChainingHashTable ht = new SeparateChainingHashTable(10000);
+        SeparateChainingHashTable ht = new SeparateChainingHashTable(100);
         Aluno[] aluno = new Aluno[100];
         BufferedReader conteudoCSV = null; //Ler todo conteúdo e salvar na memória
         String linha = "";

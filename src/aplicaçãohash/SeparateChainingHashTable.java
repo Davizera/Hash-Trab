@@ -48,6 +48,100 @@ public class SeparateChainingHashTable {
         Position = theLists[ x.hash(theLists.length)].indexOf(x);
     return (Hashable)theLists[ x.hash(theLists.length)].get(Position); // equals será usado aqui
     }
+    
+    public void size() {
+        int i;
+        for (i=0; i<theLists.length; i++) {
+            System.out.println("Posição "+i+"=> "+theLists[i].size());
+        }
+    }
+    
+    public void test() {
+        int zero,a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q,r,s,cont;
+        zero=a=b=c=d=e=f=g=h=i=j=l=m=n=o=p=0;
+        for (cont=0; cont<theLists.length; cont++) {
+            if (theLists[cont].size() == 0) {
+                zero++;
+            }
+            
+            if (theLists[cont].size() == 1) {
+                a++;
+            }
+            
+            if (theLists[cont].size() == 2) {
+                b++;
+            }
+            
+            if (theLists[cont].size() == 3) {
+                c++;
+            }
+            
+            if (theLists[cont].size() == 4) {
+                d++;
+            }
+            
+            if (theLists[cont].size() == 5) {
+                e++;
+            }
+            
+            if (theLists[cont].size() == 6) {
+                f++;
+            }
+            
+            if (theLists[cont].size() == 7) {
+                g++;
+            }
+            
+            if (theLists[cont].size() == 8) {
+                h++;
+            }
+            
+            if (theLists[cont].size() == 9) {
+                i++;
+            }
+            
+            if (theLists[cont].size() == 10) {
+                j++;
+            }
+            
+            if (theLists[cont].size() == 11) {
+                l++;
+            }
+            
+            if (theLists[cont].size() == 12) {
+                m++;
+            }
+            
+            if (theLists[cont].size() == 13) {
+                n++;
+            }
+            
+            if (theLists[cont].size() == 14) {
+                o++;
+            }
+            
+            if (theLists[cont].size() == 15) {
+                p++;
+            }
+        }
+        
+        System.out.println("Zero elemento ocupa "+zero+" posições"+
+                                "\nUm elemento ocupa "+a+" posições"+
+                                "\nDois elementos ocupam "+b+" posições"+            
+                                "\nTres elemento ocupa "+c+" posições"+
+                                "\nQuatro elemento ocupa "+d+" posições"+
+                                "\nCinco elemento ocupa "+e+" posições"+
+                                "\nSeis elemento ocupa "+f+" posições"+
+                                "\nSete elemento ocupa "+g+" posições"+
+                                "\nOito elemento ocupa "+h+" posições"+
+                                "\nNove elemento ocupa "+i+" posições"+
+                                "\nDez elemento ocupa "+j+" posições"+
+                                "\nOnze elemento ocupa "+l+" posições"+
+                                "\nDoze elemento ocupa "+m+" posições"+
+                                "\nTreze elemento ocupa "+n+" posições"+
+                                "\nQuartoze elemento ocupa "+o+" posições"+
+                                "\nQuinze elemento ocupa "+p+" posições");
+    }
 
     public void printTable(){
         System.out.println("Já chamou");

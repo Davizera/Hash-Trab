@@ -22,11 +22,12 @@ public class Aluno extends SeparateChainingHashTable implements Hashable {
 
     
     @Override
-    public int hash (String key, int tableSize) {
+    public int hash (String key, int tableSize){
         int hashValue=0;
         for (int i=0;i<key.length();i++) {
             hashValue+=key.charAt(i);
         }
+        System.out.println(hashValue%tableSize);
         return hashValue%tableSize;
     }
     
